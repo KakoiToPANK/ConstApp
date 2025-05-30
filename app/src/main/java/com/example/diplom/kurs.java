@@ -10,7 +10,10 @@ public class kurs {
     public static ArrayList<razdel> sections = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
 
-
+    public kurs(int id, String name) {
+        this.id = id;
+        this.title = name;
+    }
     public static void set_name(String name) {
         title = name;
     }

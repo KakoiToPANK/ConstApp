@@ -54,6 +54,7 @@
         android:layout_width="325dp"
         android:layout_height="189dp"
         android:layout_marginTop="12dp"
+        android:src="@drawable/fujimeow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
