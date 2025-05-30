@@ -10,10 +10,7 @@ public class kurs {
     public static ArrayList<razdel> sections = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
 
-    public kurs(int id, String title) {
-        this.id = id;
-        this.title = title;
-    }
+
     public static void set_name(String name) {
         title = name;
     }
@@ -25,9 +22,7 @@ public class kurs {
     public String get_title() {
         return title;
     }
-    public String get_des() {
-        return description;
-    }
+
     public static void add_sec() { //в дальнейшем нужно будет прописать полноценный порядок работы с начальным заполнением и пр.
         int k = 0;
         razdel el = new razdel();

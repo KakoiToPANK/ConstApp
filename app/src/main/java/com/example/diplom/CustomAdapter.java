@@ -15,18 +15,22 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public CustomAdapter(List<Object> items) {
         this.items = items;
     }
-
     @Override
-    public int getItemCount() {
-        return items.size();
+    public int getItemViewType(int position) {
+        Object item = items.get(position);
+        if (item instanceof kurs) {
+            return TYPE_COURSE;
+        }
     }
-    
+
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.course_item, parent, false);
-        return new CourseViewHolder(view);
+        if (viewType == TYPE_COURSE) {
+            View view = inflater.inflate(R.layout.course_item, parent, false);
+            return new CourseViewHolder(view);
+        }
     }
 
     @Override

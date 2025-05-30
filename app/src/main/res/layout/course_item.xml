@@ -54,23 +54,10 @@
         android:layout_width="325dp"
         android:layout_height="189dp"
         android:layout_marginTop="12dp"
-        android:src="@drawable/fujimeow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
         tools:srcCompat="@tools:sample/avatars" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="350dp"
-        android:layout_height="293dp"
-        android:text="Button"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
