@@ -51,5 +51,9 @@ import androidx.appcompat.app.AppCompatActivity;
         startActivity(intent);
         finish();
         }
-}
+    public void openCourseUseActivity(View view) {
+        Intent intent = new Intent(this, courseUseActivity.class);
+        startActivity(intent);
+        }
+    }
 

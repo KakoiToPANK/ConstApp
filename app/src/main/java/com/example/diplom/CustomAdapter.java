@@ -32,6 +32,7 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof CourseViewHolder) {
             ((CourseViewHolder) holder).bind((kurs) items.get(position));
+            ((CourseViewHolder) holder).setOnClickListener(position);
         }
     }
 }

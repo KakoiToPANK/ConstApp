@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Diplom"
         tools:targetApi="31">
         <activity
+            android:name=".courseUseActivity"
+            android:exported="false"
+            android:label="courseUseActivity"
+            android:theme="@style/Theme.Diplom" />
+        <activity
             android:name=".PluggerActivity"
             android:exported="false"
             android:label="@string/title_activity_plugger"
