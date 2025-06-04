@@ -26,16 +26,11 @@ public class kurs {
         return title;
     }
 
-    public static void add_sec() { //в дальнейшем нужно будет прописать полноценный порядок работы с начальным заполнением и пр.
-        int k = 0;
+    public static void add_sec(String name, String des) {
         razdel el = new razdel();
-        el.set_name();
-        el.set_des();
-        System.out.print("enter count of documents: ");  //Эта строка заменится и будет выполняться по нажатию в приложении
-        k = scanner.nextInt();
-        for (int i=0; i<k; i+=1){
-            el.add_doc();
-        }
+        el.set_name(name);
+        el.set_des(des);
+        //прописать процесс добавления документа в случае нажатия на кнопку в приложении (или при сохранении заготовки)
         sections.add(el);
     }
 
