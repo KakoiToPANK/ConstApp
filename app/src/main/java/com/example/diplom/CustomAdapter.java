@@ -2,19 +2,17 @@ package com.example.diplom;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private static final int TYPE_COURSE = 0;
-    private final List<Object> items;
-
-    public CustomAdapter(List<Object> items) {
+    public static List<kurs> items;
+    public CustomAdapter(List<kurs> items) {
         this.items = items;
     }
+
     @Override
     public int getItemCount() {
         return items.size(); // Возвращает размер списка
@@ -33,6 +31,7 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         if (holder instanceof CourseViewHolder) {
             ((CourseViewHolder) holder).bind((kurs) items.get(position));
             ((CourseViewHolder) holder).setOnClickListener(position);
+            items.get(position).setItemView(holder.itemView);
         }
     }
 }

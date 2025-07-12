@@ -3,12 +3,24 @@ package com.example.diplom;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class razdel {
+    public int section_id;
     public String title;
     public String description;
-    public static ArrayList<document> documents = new ArrayList<>();
+    public ArrayList<document> documents = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
+    public int course_id;
 
-    public void mksection() {
+    public void setCourse_id(int id) {
+        this.course_id = id;
+    }
+    public void setSectionID(int id) {
+        this.section_id = id;
+    }
+    public int get_sectionID() {
+        return section_id;
+    }
+    public int get_courseid() {
+        return course_id;
     }
     public void set_name(String name) {
         this.title = name;
@@ -26,10 +38,10 @@ public class razdel {
         el.setRef(ref);
         documents.add(el);
     }
-    public static void del_doc(int pos) {
+    public void del_doc(int pos) {
         documents.remove(pos);
     }
-    public static document get_doc(int pos) {
+    public document get_doc(int pos) {
         return documents.get(pos);
     }
     public ArrayList<document> getDocuments() {

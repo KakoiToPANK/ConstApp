@@ -1,5 +1,7 @@
 package com.example.diplom;
 
+import android.graphics.BitmapFactory;
+
 import java.util.Scanner;
 
 public class init {
@@ -8,7 +10,7 @@ public class init {
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
         String des = scanner.nextLine();
-        kurs Kurs = new kurs(1, name);
+        kurs Kurs = new kurs(1, name, "чёто", BitmapFactory.decodeFile("/E/курс java.png"));
 
         int j = 0;
         Kurs.set_des(des);

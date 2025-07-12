@@ -41,7 +41,6 @@
             android:background="#00FFFFFF"
             android:backgroundTint="#00FFFFFF"
             android:src="@drawable/user_icon"
-            android:onClick="openCourseUseActivity"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -52,26 +51,27 @@
             android:id="@+id/imageButton2"
             android:layout_width="32dp"
             android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
             android:background="#00FFFFFF"
             android:backgroundTint="#00FFFFFF"
             android:src="@drawable/option_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.957"
+            app:layout_constraintHorizontal_bias="0.818"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.697"
+            app:layout_constraintVertical_bias="0.694"
             app:srcCompat="@drawable/option_icon"
             tools:srcCompat="@drawable/option_icon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottomNavigationView"
-        android:layout_width="411dp"
+        android:layout_width="400dp"
         android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
@@ -82,7 +82,7 @@
             android:layout_marginTop="32dp"
             android:background="#00FFFFFF"
             android:backgroundTint="#00FFFFFF"
-            android:onClick="openPluggerActivity"
+            android:onClick=""
             android:src="@drawable/notification_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -107,7 +107,7 @@
             android:layout_marginTop="32dp"
             android:background="#00FFFFFF"
             android:backgroundTint="#00FFFFFF"
-            android:onClick="openPluggerActivity"
+            android:onClick=""
             android:src="@drawable/dialog_icon"
             app:layout_constraintStart_toEndOf="@+id/imageButton3"
             app:layout_constraintTop_toTopOf="parent"
@@ -132,7 +132,7 @@
             android:layout_marginEnd="40dp"
             android:background="#00FFFFFF"
             android:backgroundTint="#00FFFFFF"
-            android:onClick="openPluggerActivity"
+            android:onClick=""
             android:src="@drawable/arch_icon"
             app:layout_constraintEnd_toStartOf="@+id/exitButton"
             app:layout_constraintTop_toTopOf="parent"
@@ -184,7 +184,7 @@
             android:layout_marginEnd="32dp"
             android:background="#00FFFFFF"
             android:backgroundTint="#00FFFFFF"
-            android:onClick="onExitButtonClick"
+            android:onClick=""
             android:src="@drawable/exit_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -205,12 +205,15 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerView"
-        android:layout_width="411dp"
-        android:layout_height="522dp"
+        android:id="@+id/RecyclerViewFile"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
         android:layout_marginTop="8dp"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -218,24 +221,27 @@
         android:id="@+id/textView7"
         android:layout_width="130dp"
         android:layout_height="22dp"
-        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:text="Мои курсы"
+        android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <Button
         android:id="@+id/button2"
+        style="@style/AppButtonStyle"
         android:layout_width="387dp"
         android:layout_height="44dp"
         android:layout_marginTop="10dp"
-        android:text="Создать курс"
         android:onClick="openConstructorActivity"
+        android:text="Создать курс"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RecyclerView" />
+        app:layout_constraintTop_toBottomOf="@+id/RecyclerViewFile"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

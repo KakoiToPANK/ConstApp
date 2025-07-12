@@ -1,31 +1,47 @@
 package com.example.diplom;
 
+import android.graphics.Bitmap;
+import android.view.View;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class kurs {
-    public static int id;
-    public static String title;
-    static public String description;
+    public int id;
+    public String title;
+    public String description;
     public static ArrayList<razdel> sections = new ArrayList<>();
-    static Scanner scanner = new Scanner(System.in);
+    public Bitmap Preview;
+    private transient View itemView;   // transient - чтобы избежать сериализации
 
-    public kurs(int id, String name) {
+    public void setItemView(View view) {
+        this.itemView = view;
+    }
+
+    public kurs(int id, String name, String des, Bitmap preview) {
         this.id = id;
         this.title = name;
+        this.description = des;
+        this.Preview = preview;
     }
-    public static void set_name(String name) {
+    public void set_name(String name) {
         title = name;
     }
 
-    public static void set_des(String des) {
+    public void set_des(String des) {
         description = des;
     }
 
     public String get_title() {
         return title;
     }
-
+    public Bitmap get_preview() {
+        return Preview;
+    }
+    public String get_des() {
+        return description;
+    }
+    public int get_id() {
+        return id;
+    }
     public static void add_sec(String name, String des) {
         razdel el = new razdel();
         el.set_name(name);
@@ -38,7 +54,7 @@ public class kurs {
         sections.remove(pos);
     }
 
-    public static void kurs_info(){ //как прототип решения для просмотра материалов курса
+    public void kurs_info(){ //как прототип решения для просмотра материалов курса
         System.out.println(title);
         System.out.println(description);
         int k = sections.size();
