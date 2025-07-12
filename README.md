@@ -5,7 +5,7 @@
 
 ## Ветки проекта
 
-- Ветка [`App`](https://github.com/ваш-username/ваш-репозиторий/tree/App) содержит непосредственно сам проект
+- Ветка [`App`](https://github.com/KakoiToPANK/ConstApp/tree/App) содержит непосредственно сам проект
 - Ветка [`Ex`](https://github.com/ваш-username/ваш-репозиторий/tree/Ex) содержит скриншоты с примерами
 
 ## Установка и запуск
